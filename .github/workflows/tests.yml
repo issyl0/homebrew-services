@@ -1,7 +1,7 @@
 name: GitHub Actions CI
 on:
   push:
-    branches: master
+    branches: [master, fix-services-wrongly-showing-up-as-root-forked-ci]
   pull_request:
 jobs:
   tests:
