@@ -46,8 +46,9 @@ jobs:
         brew install redis
         brew services start redis
         brew services list | grep redis
-        sleep 30
-        redis-cli INFO | grep ^db
+        sleep 5
+        which redis-cli
+        redis-cli INFO
 
     - name: Test stop command
       run: |
