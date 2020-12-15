@@ -43,11 +43,11 @@ jobs:
     - name: Test start command
       run: |
         # Test start command
-        brew install mysql
-        brew services start mysql
-        brew services list | grep mysql
+        brew install redis
+        brew services start redis
+        brew services list | grep redis
         sleep 30
-        mysql -uroot -e 'show databases'
+        redis-cli INFO | grep ^db
 
     - name: Test stop command
       run: |
