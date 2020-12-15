@@ -44,8 +44,8 @@ jobs:
       run: |
         # Test start command
         brew install mysql
-        brew services start mysql
-        brew services list | grep mysql
+        sudo brew services start mysql
+        sudo brew services list | grep mysql
         sleep 5
         mysql -uroot -e 'show databases'
 
