@@ -46,7 +46,7 @@ jobs:
         brew install mysql
         brew services start mysql
         brew services list | grep mysql
-        sleep 10
+        sleep 20
         mysql -uroot -e 'show databases'
 
     - name: Test stop command
